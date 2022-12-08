@@ -1,5 +1,5 @@
 {
-  "name": "aui",
+  "name": "@MQpeng/aui",
   "version": "0.0.1",
   "description": "A web-component library based on Ant Design",
   "main": "dist/index.cjs.js",
@@ -16,7 +16,8 @@
   },
   "files": [
     "dist/",
-    "loader/"
+    "loader/",
+    "custom-element/"
   ],
   "scripts": {
     "build": "stencil build --docs",
@@ -24,17 +25,35 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "deploy": "git submodule update && npm run build:demo && gh-pages -d ./demo/src/.vuepress/dist",
+    "prettier": "npx prettier --write ./src"
   },
   "dependencies": {
     "@stencil/core": "^2.13.0"
   },
   "devDependencies": {
+    "@angular/core": "^14.1.2",
+    "@stencil/angular-output-target": "^0.4.0",
+    "@stencil/react-output-target": "^0.3.1",
     "@stencil/sass": "^2.0.1",
+    "@stencil/svelte-output-target": "^0.0.3",
+    "@stencil/vue-output-target": "^0.6.2",
     "@types/jest": "^27.0.3",
+    "@types/events": "^3.0.0",
+    "@types/node": "^18.7.2",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@types/resize-observer-browser": "^0.1.7",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
-    "puppeteer": "^10.0.0"
+    "puppeteer": "^10.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rxjs": "^6.6.3",
+    "svelte": "^3.54.0",
+    "prettier": "2.2.1",
+    "vue": "^3.2.37"
   },
   "license": "MIT"
 }

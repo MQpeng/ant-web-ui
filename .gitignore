@@ -11,7 +11,7 @@ loader/
 log.txt
 *.sublime-project
 *.sublime-workspace
-
+custom-element/
 .stencil/
 .idea/
 .vscode/
