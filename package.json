@@ -17,7 +17,8 @@
   "files": [
     "dist/",
     "loader/",
-    "custom-element/"
+    "custom-element/",
+    "lib/"
   ],
   "scripts": {
     "build": "stencil build --docs",

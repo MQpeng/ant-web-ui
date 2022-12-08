@@ -33,6 +33,7 @@ export namespace Components {
         "nzType": string;
     }
     interface AuiMessage {
+        "close": () => Promise<void>;
         "content": string;
         /**
           * Whether to turn on animation

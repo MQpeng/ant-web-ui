@@ -1,4 +1,4 @@
-import { Component, Prop, h, Listen, Element } from '@stencil/core';
+import { Component, Prop, h, Listen, Element, Method } from '@stencil/core';
 export interface NzMessageDataOptions {
   nzDuration?: number;
   nzAnimate?: boolean;
@@ -73,9 +73,14 @@ export class MessageComponent {
   startTimer() {
     if (this.timer) return;
     this.timer = setTimeout(() => {
-      // this.el.remove();
+      this.el.remove();
       this.timer = null;
     }, this.nzDuration);
+  }
+
+  @Method()
+  close() {
+    this.el.remove();
   }
 
   stopTimer() {
