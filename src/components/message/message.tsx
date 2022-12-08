@@ -74,7 +74,7 @@ export class MessageComponent {
   startTimer() {
     if (this.timer) return;
     this.timer = setTimeout(() => {
-      // this.el.remove();
+      this.el.remove();
       this.timer = null;
     }, this.nzDuration);
   }
