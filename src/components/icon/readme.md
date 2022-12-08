@@ -7,15 +7,28 @@
 
 ## Properties
 
-| Property | Attribute | Description     | Type     | Default     |
-| -------- | --------- | --------------- | -------- | ----------- |
-| `nzType`| `nzType` | Type of the ant design icon | `string` | - |
-| `nzTheme`| `nzTheme` | Type of the ant design icon | `'fill'\|'outline'\|'twotone'` | `'outline'` | ✅ |
-| `nzSpin`| `nzSpin` | Rotate icon with animation | `boolean` | `false` |
-| `nzTwotoneColor`| `nzTwotoneColor` | Only support the two-tone icon. Specific the primary color. | `string (hex color)` | - | ✅ |
-| `nzIconfont`| `nzIconfont` | Type of the icon from iconfont | `string` | - |
-| `nzRotate`| `nzRotate` | Rotate degrees | `number` | - |
+| Property         | Attribute          | Description                                                 | Type      | Default     |
+| ---------------- | ------------------ | ----------------------------------------------------------- | --------- | ----------- |
+| `nzIconfont`     | `nz-iconfont`      | Type of the icon from iconfont                              | `string`  | `undefined` |
+| `nzRotate`       | `nz-rotate`        | Rotate degrees                                              | `string`  | `undefined` |
+| `nzSpin`         | `nz-spin`          | Rotate icon with animation                                  | `boolean` | `undefined` |
+| `nzTheme`        | `nz-theme`         | Type of the ant design icon                                 | `string`  | `undefined` |
+| `nzTwotoneColor` | `nz-twotone-color` | Only support the two-tone icon. Specific the primary color. | `string`  | `undefined` |
+| `nzType`         | `nz-type`          | Type of the ant design icon                                 | `string`  | `undefined` |
 
+
+## Dependencies
+
+### Used by
+
+ - [eui-message](../message)
+
+### Graph
+```mermaid
+graph TD;
+  eui-message --> eui-icon
+  style eui-icon fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

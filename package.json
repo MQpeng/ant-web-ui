@@ -26,7 +26,6 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@spectrum-web-components/overlay": "^0.18.8",
     "@stencil/core": "^2.13.0"
   },
   "devDependencies": {
