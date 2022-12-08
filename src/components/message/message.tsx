@@ -1,5 +1,4 @@
 import { Component, Prop, h, Listen, Element } from '@stencil/core';
-
 export interface NzMessageDataOptions {
   nzDuration?: number;
   nzAnimate?: boolean;
@@ -49,7 +48,7 @@ export class MessageComponent {
       warning: 'icon-warning-circle',
       error: 'icon-close-circle',
       loading: 'icon-sync',
-    }[this.nzType]
+    }[this.nzType];
   }
 
   @Listen('mouseenter')
@@ -74,25 +73,25 @@ export class MessageComponent {
   startTimer() {
     if (this.timer) return;
     this.timer = setTimeout(() => {
-      this.el.remove();
+      // this.el.remove();
       this.timer = null;
     }, this.nzDuration);
   }
 
   stopTimer() {
     if (!this.timer) {
-      clearTimeout(this.timer)
+      clearTimeout(this.timer);
     }
   }
 
   render() {
     return (
       <div class="ant-message-notice">
-        <div class={ `ant-message-notice-content ant-message-${this.nzType}` } >
-          <aui-icon nz-iconfont={this.getIcon()} nzSpin={ this.nzType == 'loading' }></aui-icon>
-          <span innerHTML={ this.content }></span>
+        <div class={`ant-message-notice-content ant-message-${this.nzType}`}>
+          <aui-icon nz-iconfont={this.getIcon()} nzSpin={this.nzType == 'loading'}></aui-icon>
+          <span innerHTML={this.content}></span>
         </div>
       </div>
-    )
+    );
   }
 }
