@@ -7,7 +7,7 @@ export interface NzMessageDataOptions {
 }
 
 @Component({
-  tag: 'eui-message',
+  tag: 'aui-message',
   styleUrl: 'message.scss',
   scoped: true,
 })
@@ -89,7 +89,7 @@ export class MessageComponent {
     return (
       <div class="ant-message-notice">
         <div class={ `ant-message-notice-content ant-message-${this.nzType}` } >
-          <eui-icon nz-iconfont={this.getIcon()} nzSpin={ this.nzType == 'loading' }></eui-icon>
+          <aui-icon nz-iconfont={this.getIcon()} nzSpin={ this.nzType == 'loading' }></aui-icon>
           <span innerHTML={ this.content }></span>
         </div>
       </div>

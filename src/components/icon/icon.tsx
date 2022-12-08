@@ -2,7 +2,7 @@ import { setStyle } from '@platform/browser';
 import { Component, Prop, h, Element } from '@stencil/core';
 
 @Component({
-  tag: 'eui-icon',
+  tag: 'aui-icon',
   styleUrl: 'icon.scss',
   scoped: true
 })

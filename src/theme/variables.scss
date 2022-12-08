@@ -186,6 +186,8 @@ $error-color: $red-5;
 $warning-color: $gold-6;
 $info-color: $primary-color;
 
+$prefix: aui;
+
 @keyframes loadingCircle {
   100% {
     transform: rotate(360deg);

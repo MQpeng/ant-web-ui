@@ -1,4 +1,4 @@
-# eui-message
+# aui-message
 
 
 
@@ -23,13 +23,13 @@
 
 ### Depends on
 
-- [eui-icon](../icon)
+- [aui-icon](../icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  eui-message --> eui-icon
-  style eui-message fill:#f9f,stroke:#333,stroke-width:4px
+  aui-message --> aui-icon
+  style aui-message fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

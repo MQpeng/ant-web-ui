@@ -1,4 +1,4 @@
-# eui-icon
+# aui-icon
 
 
 
@@ -21,13 +21,13 @@
 
 ### Used by
 
- - [eui-message](../message)
+ - [aui-message](../message)
 
 ### Graph
 ```mermaid
 graph TD;
-  eui-message --> eui-icon
-  style eui-icon fill:#f9f,stroke:#333,stroke-width:4px
+  aui-message --> aui-icon
+  style aui-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

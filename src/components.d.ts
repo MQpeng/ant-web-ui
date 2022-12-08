@@ -6,7 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface EuiIcon {
+    interface AuiIcon {
         /**
           * Type of the icon from iconfont
          */
@@ -32,7 +32,7 @@ export namespace Components {
          */
         "nzType": string;
     }
-    interface EuiMessage {
+    interface AuiMessage {
         "content": string;
         /**
           * Whether to turn on animation
@@ -62,25 +62,25 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLEuiIconElement extends Components.EuiIcon, HTMLStencilElement {
+    interface HTMLAuiIconElement extends Components.AuiIcon, HTMLStencilElement {
     }
-    var HTMLEuiIconElement: {
-        prototype: HTMLEuiIconElement;
-        new (): HTMLEuiIconElement;
+    var HTMLAuiIconElement: {
+        prototype: HTMLAuiIconElement;
+        new (): HTMLAuiIconElement;
     };
-    interface HTMLEuiMessageElement extends Components.EuiMessage, HTMLStencilElement {
+    interface HTMLAuiMessageElement extends Components.AuiMessage, HTMLStencilElement {
     }
-    var HTMLEuiMessageElement: {
-        prototype: HTMLEuiMessageElement;
-        new (): HTMLEuiMessageElement;
+    var HTMLAuiMessageElement: {
+        prototype: HTMLAuiMessageElement;
+        new (): HTMLAuiMessageElement;
     };
     interface HTMLElementTagNameMap {
-        "eui-icon": HTMLEuiIconElement;
-        "eui-message": HTMLEuiMessageElement;
+        "aui-icon": HTMLAuiIconElement;
+        "aui-message": HTMLAuiMessageElement;
     }
 }
 declare namespace LocalJSX {
-    interface EuiIcon {
+    interface AuiIcon {
         /**
           * Type of the icon from iconfont
          */
@@ -106,7 +106,7 @@ declare namespace LocalJSX {
          */
         "nzType"?: string;
     }
-    interface EuiMessage {
+    interface AuiMessage {
         "content"?: string;
         /**
           * Whether to turn on animation
@@ -135,16 +135,16 @@ declare namespace LocalJSX {
         "nzType"?: 'success' | 'info' | 'warning' | 'error' | 'loading';
     }
     interface IntrinsicElements {
-        "eui-icon": EuiIcon;
-        "eui-message": EuiMessage;
+        "aui-icon": AuiIcon;
+        "aui-message": AuiMessage;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "eui-icon": LocalJSX.EuiIcon & JSXBase.HTMLAttributes<HTMLEuiIconElement>;
-            "eui-message": LocalJSX.EuiMessage & JSXBase.HTMLAttributes<HTMLEuiMessageElement>;
+            "aui-icon": LocalJSX.AuiIcon & JSXBase.HTMLAttributes<HTMLAuiIconElement>;
+            "aui-message": LocalJSX.AuiMessage & JSXBase.HTMLAttributes<HTMLAuiMessageElement>;
         }
     }
 }

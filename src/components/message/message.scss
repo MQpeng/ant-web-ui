@@ -20,20 +20,20 @@
     }
   }
 
-  &-success eui-icon{
+  &-success #{$prefix}-icon{
     color: $success-color;
   }
 
-  &-error eui-icon {
+  &-error #{$prefix}-icon {
     color: $error-color;
   }
 
-  &-warning eui-icon {
+  &-warning #{$prefix}-icon {
     color: $warning-color;
   }
 
-  &-info eui-icon,
-  &-loading eui-icon {
+  &-info #{$prefix}-icon,
+  &-loading #{$prefix}-icon {
     color: $info-color;
   }
 }
