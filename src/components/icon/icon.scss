@@ -1,0 +1,15 @@
+:host {
+  vertical-align: text-bottom;
+  margin-inline-end: 8px;
+  line-height: 0;
+  display: inline-block;
+  font-size: 16px;
+}
+
+svg{
+  box-sizing: border-box;
+
+  use{
+    box-sizing: border-box;
+  }
+}

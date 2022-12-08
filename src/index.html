@@ -3,12 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
+    <title>Ant-Web-UI Component Starter</title>
 
     <script type="module" src="/build/eui.esm.js"></script>
     <script nomodule src="/build/eui.js"></script>
+    <script src="//at.alicdn.com/t/c/font_1909561_ug0dxymgdm.js"></script>
+    <script>
+      // setTimeout(() => {
+      //   MessageBuilder.create('success', '撒旦发射点发')
+      // }, 1000);
+    </script>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <eui-icon nz-iconfont="icon-kongyunjinkoukou"></eui-icon>
+    <eui-message nz-type="success" content="啊手动阀"></eui-message>
+    <eui-message nz-type="info" content="提示"></eui-message>
+    <eui-message nz-type="error" content="错误"></eui-message>
+    <eui-message nz-type="warning" content="警告"></eui-message>
+    <eui-message nz-type="loading" content="加载"></eui-message>
   </body>
 </html>

@@ -6,56 +6,145 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface EuiIcon {
         /**
-          * The first name
+          * Type of the icon from iconfont
          */
-        "first": string;
+        "nzIconfont": string;
         /**
-          * The last name
+          * Rotate degrees
          */
-        "last": string;
+        "nzRotate": string;
         /**
-          * The middle name
+          * Rotate icon with animation
          */
-        "middle": string;
+        "nzSpin": boolean;
+        /**
+          * Type of the ant design icon
+         */
+        "nzTheme": string;
+        /**
+          * Only support the two-tone icon. Specific the primary color.
+         */
+        "nzTwotoneColor": string;
+        /**
+          * Type of the ant design icon
+         */
+        "nzType": string;
+    }
+    interface EuiMessage {
+        "content": string;
+        /**
+          * Whether to turn on animation
+         */
+        "nzAnimate": boolean;
+        /**
+          * Direction of the text in the messages
+         */
+        "nzDirection": 'ltr' | 'rtl';
+        /**
+          * Duration (milliseconds), does not disappear when set to 0
+         */
+        "nzDuration": number;
+        /**
+          * The maximum number of messages that can be displayed at the same time
+         */
+        "nzMaxStack": number;
+        /**
+          * Do not remove automatically when mouse is over while setting to `true`
+         */
+        "nzPauseOnHover": boolean;
+        /**
+          * Distance from `top`
+         */
+        "nzTop": string | number;
+        "nzType": 'success' | 'info' | 'warning' | 'error' | 'loading';
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLEuiIconElement extends Components.EuiIcon, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLEuiIconElement: {
+        prototype: HTMLEuiIconElement;
+        new (): HTMLEuiIconElement;
+    };
+    interface HTMLEuiMessageElement extends Components.EuiMessage, HTMLStencilElement {
+    }
+    var HTMLEuiMessageElement: {
+        prototype: HTMLEuiMessageElement;
+        new (): HTMLEuiMessageElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "eui-icon": HTMLEuiIconElement;
+        "eui-message": HTMLEuiMessageElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface EuiIcon {
         /**
-          * The first name
+          * Type of the icon from iconfont
          */
-        "first"?: string;
+        "nzIconfont"?: string;
         /**
-          * The last name
+          * Rotate degrees
          */
-        "last"?: string;
+        "nzRotate"?: string;
         /**
-          * The middle name
+          * Rotate icon with animation
          */
-        "middle"?: string;
+        "nzSpin"?: boolean;
+        /**
+          * Type of the ant design icon
+         */
+        "nzTheme"?: string;
+        /**
+          * Only support the two-tone icon. Specific the primary color.
+         */
+        "nzTwotoneColor"?: string;
+        /**
+          * Type of the ant design icon
+         */
+        "nzType"?: string;
+    }
+    interface EuiMessage {
+        "content"?: string;
+        /**
+          * Whether to turn on animation
+         */
+        "nzAnimate"?: boolean;
+        /**
+          * Direction of the text in the messages
+         */
+        "nzDirection"?: 'ltr' | 'rtl';
+        /**
+          * Duration (milliseconds), does not disappear when set to 0
+         */
+        "nzDuration"?: number;
+        /**
+          * The maximum number of messages that can be displayed at the same time
+         */
+        "nzMaxStack"?: number;
+        /**
+          * Do not remove automatically when mouse is over while setting to `true`
+         */
+        "nzPauseOnHover"?: boolean;
+        /**
+          * Distance from `top`
+         */
+        "nzTop"?: string | number;
+        "nzType"?: 'success' | 'info' | 'warning' | 'error' | 'loading';
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "eui-icon": EuiIcon;
+        "eui-message": EuiMessage;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "eui-icon": LocalJSX.EuiIcon & JSXBase.HTMLAttributes<HTMLEuiIconElement>;
+            "eui-message": LocalJSX.EuiMessage & JSXBase.HTMLAttributes<HTMLEuiMessageElement>;
         }
     }
 }

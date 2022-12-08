@@ -1,5 +1,5 @@
 {
-  "name": "eui",
+  "name": "aui",
   "version": "0.0.1",
   "description": "A web-component library based on Ant Design",
   "main": "dist/index.cjs.js",
@@ -9,7 +9,7 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/eui/eui.esm.js",
+  "unpkg": "dist/aui/aui.esm.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/MQpeng/ant-web-ui.git"
@@ -26,9 +26,11 @@
     "generate": "stencil generate"
   },
   "dependencies": {
+    "@spectrum-web-components/overlay": "^0.18.8",
     "@stencil/core": "^2.13.0"
   },
   "devDependencies": {
+    "@stencil/sass": "^2.0.1",
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",

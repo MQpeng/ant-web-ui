@@ -8,6 +8,15 @@
       "dom",
       "es2017"
     ],
+    "baseUrl": "./",
+    "paths": {
+      "@platform/*": [
+        "src/platform/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ]
+    },
     "moduleResolution": "node",
     "module": "esnext",
     "target": "es2017",
